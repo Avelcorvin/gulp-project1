@@ -1,5 +1,209 @@
-$color:rgb(0,100,100);
+@import 'normalize.scss';
+@import 'crossbrowsers.scss';
+//--///----MIXINS----///--//
+
+@mixin font-MuseoSans {
+    font-family: Arial, Helvetica, sans-serif;//MuseoSansCyril
+}
+
+//--///----MIXINS----///--//
+
+//-----------// FUNCTIONS----///////
+@function piexelW($piexel){
+    $px:px;
+    $k:1;
+    @return $piexel*$k+$px;
+};
+@function piexelH($piexel){
+    $px:px;
+    $k:1;
+    @return $piexel*$k+$px;
+};
+//-----------// Constants----///////
 
 body{
-    background-color:$color;
+//  background-color: wheat;
+ @include font-MuseoSans;
+ background-color: rgb(248, 233, 205);
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.section-inner{
+    width: piexelW(1560);
+    margin: 0 auto;
+}
+
+.section-header{
+    display: flex;
+    flex-direction: row;
+    .section-inner{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &-logo{
+        background: url('../img/Логотип.png') no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        width: piexelW(280);
+        height: piexelH(126);
+    }
+    &-logo-decription{
+        font-size: 14;
+        font-weight: 300;
+        margin-left: piexelW(43.6);
+        width: piexelW(145);
+    }
+    &-adress{
+        margin-left: piexelW(136);
+        display: flex;
+        flex-direction: row;
+        &_map{
+            background: url('../img/map.png') no-repeat;
+            background-position: 0% 0% ;
+            background-size:cover ;
+            border: solid #444444 1px;
+            border-radius: 50%;
+            box-shadow: 0 3px 20px rgba(68,68,68,0.11);
+            width: piexelW(78);
+            height: piexelH(78);
+            margin-right: piexelW(23.3);;
+        }
+        &_adress{
+            width: piexelW(207);
+            font-size:16;
+            font-weight: 300;
+            text-align: left;
+            p{
+                margin-bottom:piexelH(16.9);
+            }
+            strong{
+                font-weight: 700;
+            }
+            a{
+                font-size: 12px;
+                font-weight: 300px;
+                color: #FF6078;
+                text-decoration:none;
+                border-bottom: dotted #FF6078 1px ;
+            }
+
+            
+        }
+
+    }
+    &-work-time{
+        margin-left: piexelW(64);
+        &_wrapper{
+            display: flex;
+            flex-direction: row;
+         }
+        &_mobile-icon{
+            position: relative;
+            background: white;
+            background-position: 50% 50% ;
+            background-size: auto ;
+            border-radius: 50%;
+            box-shadow: 0 3px 20px rgba(68,68,68,0.11);
+            width: piexelW(35);
+            height: piexelH(35);
+            margin-right: piexelW(11);
+        }
+        &_mobile-icon::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: url('../img/mobile.png') no-repeat;
+            background-position: 50% 50% ;
+            background-size: auto ;
+        }
+        &_clock-icon{
+            position: relative;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 3px 20px rgba(68,68,68,0.11);
+            width: piexelW(35);
+            height: piexelH(35);
+            margin-right: piexelW(11);
+         }
+         &_clock-icon::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: url('../img/clock1.png') no-repeat;
+            background-position: 50% 50% ;
+            background-size: auto ;
+
+        }
+        
+         
+        &_mobile-number{
+            width: piexelW(213.66);
+            font-size: 12px;
+            font-weight: 500;
+
+
+            div{
+                display: flex;
+                flex-direction: row;
+                 text-align: right;
+            }
+            
+             strong{
+                 font-size: 24px;
+             }
+             
+            &-green-dot{
+                margin: auto 11px auto 0;
+                width: piexelW(6);
+                height: piexelH(6);
+                background-color: #27B24B;
+                border-radius: 50%;
+                box-shadow: 0 0 7px rgba(79,160,55,0.61);
+             }
+         }
+     
+         &-date{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+            // display: flex;
+            // justify-content: center; 
+         }
+       
+
+     }
+    &-record{
+    margin-left: piexelW(62);
+        &-wrapper{
+            background: white;
+            font-size: 15;
+            font-weight: 500;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px 22px;
+            border-radius: 30px;;
+        }
+   
+        &_calendar-icon{
+            background: url('../img/calendaricon.png') no-repeat;
+            width: piexelW(20);
+            height: piexelH(20);
+            margin-right:piexelW(10);
+            }        
+    }
 }

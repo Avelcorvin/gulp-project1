@@ -1,0 +1,9 @@
+@function width($obj){
+    $ms :"--ms--width:"$obj;
+    $opera:"-ae--width:"$obj;
+    @return $ms,$opera;
+}
+@mixin width($obj) {
+    --width--obj:#{$obj};
+    --opera--ololo:#{$obj};
+}

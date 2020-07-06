@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"gulp watch"
   },
   "repository": {
     "type": "git",
@@ -15,10 +16,5 @@
   "bugs": {
     "url": "https://github.com/Avelcorvin/Gulp/issues"
   },
-  "homepage": "https://github.com/Avelcorvin/Gulp#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0"
-  }
+  "homepage": "https://github.com/Avelcorvin/Gulp#readme"
 }
